@@ -11,7 +11,7 @@ class MiniGamesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mini Games'),
+        title: const Text('Edukasi HIV/AIDS'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
@@ -47,18 +47,18 @@ class MiniGamesScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '🧩 Mini Games',
+                  '📚 Edukasi HIV/AIDS',
                   style: AppTextStyles.heading2.copyWith(color: Colors.white),
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Belajar sambil bermain yang menyenangkan',
+                  'Informasi dan artikel kesehatan',
                   style: AppTextStyles.bodyMedium.copyWith(color: Colors.white.withOpacity(0.9)),
                 ),
               ],
             ),
           ),
-          const Text('🎮', style: TextStyle(fontSize: 48)),
+          const Text('💡', style: TextStyle(fontSize: 48)),
         ],
       ),
     );

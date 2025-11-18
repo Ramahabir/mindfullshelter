@@ -16,7 +16,7 @@ class _CurhatScreenState extends State<CurhatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ruang Curhat'),
+        title: const Text('Ruang Chat Anonim'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
@@ -40,7 +40,7 @@ class _CurhatScreenState extends State<CurhatScreen> {
         onPressed: () => _showNewPostDialog(),
         backgroundColor: AppColors.primary,
         icon: const Icon(Icons.edit),
-        label: const Text('Curhat'),
+        label: const Text('Chat Anonim'),
       ),
     );
   }
@@ -64,12 +64,12 @@ class _CurhatScreenState extends State<CurhatScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '💬 Ruang Curhat Aman',
+                  '💬 Ruang Chat Anonim',
                   style: AppTextStyles.heading2.copyWith(color: Colors.white),
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Berbagi cerita dengan teman-teman',
+                  'Berbagi cerita tanpa identitas',
                   style: AppTextStyles.bodyMedium.copyWith(color: Colors.white.withOpacity(0.9)),
                 ),
               ],

@@ -93,21 +93,43 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '🌼 MindShelter',
+                  '💖 VIDA Digital',
                   style: AppTextStyles.heading3.copyWith(color: Colors.white),
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Rumah Digital untuk Jiwa Bahagia dan Percaya Diri',
+                  'Platform Edukasi dan Dukungan Mental bagi Penyintas HIV/AIDS',
                   style: AppTextStyles.bodyMedium.copyWith(color: Colors.white.withOpacity(0.9)),
                 ),
               ],
             ),
           ),
           const SizedBox(width: 16),
-          const Text(
-            '🏡',
-            style: TextStyle(fontSize: 48),
+          Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                'assets/images/vida.jpg',
+                width: 60,
+                height: 60,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Center(
+                    child: Icon(
+                      Icons.favorite,
+                      size: 36,
+                      color: Colors.white.withOpacity(0.9),
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
         ],
       ),
@@ -172,44 +194,44 @@ class HomeScreen extends StatelessWidget {
       {
         'icon': '🎧',
         'title': 'Audio Mindfulness',
-        'subtitle': 'Relaksasi & Motivasi',
-        'color': const Color.fromARGB(255, 255, 74, 92), // Red Light - Lebih gelap
+        'subtitle': 'Musik & Relaksasi',
+        'color': const Color(0xFFF8BBD0), // Pink Light
         'route': const AudioMindfulnessScreen(),
       },
       {
         'icon': '💬',
-        'title': 'Ruang Curhat',
+        'title': 'Chat Anonim',
         'subtitle': 'Berbagi Cerita',
-        'color': const Color.fromARGB(255, 41, 158, 255), // Blue Light - Lebih gelap
+        'color': const Color(0xFFE1BEE7), // Purple Light
         'route': const CurhatScreen(),
       },
       {
         'icon': '📱',
         'title': 'Mood Tracker',
-        'subtitle': 'Catat Emosimu',
-        'color': const Color.fromARGB(255, 255, 232, 23), // Yellow Light - Lebih gelap
+        'subtitle': 'Pantau Emosi',
+        'color': const Color(0xFFFFF59D), // Yellow Light
         'route': const MoodTrackerScreen(),
       },
       {
         'icon': '🤖',
         'title': 'Teman Hati',
-        'subtitle': 'Chatbot Sahabat',
-        'color': const Color.fromARGB(255, 81, 255, 86), // Green Light - Lebih gelap
+        'subtitle': 'Chatbot 24/7',
+        'color': const Color(0xFFC8E6C9), // Green Light
         'route': const ChatbotScreen(),
       },
       {
-        'icon': '🧩',
-        'title': 'Mini Games',
-        'subtitle': 'Belajar Sambil Main',
-        'color': const Color.fromARGB(255, 230, 90, 255), // Purple Light - Lebih gelap
+        'icon': '📚',
+        'title': 'Edukasi',
+        'subtitle': 'Info HIV/AIDS',
+        'color': const Color(0xFFBBDEFB), // Blue Light
         'route': const MiniGamesScreen(),
       },
       {
-        'icon': '📖',
-        'title': 'Journal',
-        'subtitle': 'Tulis Harimu',
-        'color': const Color.fromARGB(255, 255, 38, 114), // Pink Light - Lebih gelap
-        'route': const MoodTrackerScreen(), // Akan diganti dengan Journal Screen
+        'icon': '🫂',
+        'title': 'Komunitas',
+        'subtitle': 'Support Group',
+        'color': const Color(0xFFFFCDD2), // Red Light
+        'route': const MoodTrackerScreen(),
       },
     ];
 
@@ -245,21 +267,26 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Text(
                   feature['icon'] as String,
-                  style: const TextStyle(fontSize: 48),
+                  style: const TextStyle(fontSize: 40),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 8),
                 Text(
                   feature['title'] as String,
-                  style: AppTextStyles.heading3.copyWith(fontSize: 14),
+                  style: AppTextStyles.heading3.copyWith(fontSize: 13),
                   textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 2),
                 Text(
                   feature['subtitle'] as String,
                   style: AppTextStyles.bodySmall.copyWith(
-                    color: Colors.white, // ← Ubah warna menjadi putih
+                    fontSize: 10,
+                    color: AppColors.textSecondary,
                   ),
                   textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),

@@ -69,7 +69,7 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Catat emosi harimu di sini 📝',
+                  'Pantau perkembangan emosimu 📝',
                   style: AppTextStyles.bodyMedium.copyWith(color: Colors.white.withOpacity(0.9)),
                 ),
               ],

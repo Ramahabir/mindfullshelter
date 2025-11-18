@@ -13,7 +13,7 @@ class AudioMindfulnessScreen extends StatefulWidget {
 
 class _AudioMindfulnessScreenState extends State<AudioMindfulnessScreen> {
   String selectedCategory = 'Semua';
-  final List<String> categories = ['Semua', 'Relaksasi', 'Motivasi', 'Tidur', 'Cerita Lokal'];
+  final List<String> categories = ['Semua', 'Relaksasi', 'Meditasi', 'Tidur'];
 
   @override
   Widget build(BuildContext context) {
@@ -56,12 +56,12 @@ class _AudioMindfulnessScreenState extends State<AudioMindfulnessScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '🎧 Audio Ceria',
+                  '🎧 Audio Mindfulness',
                   style: AppTextStyles.heading2.copyWith(color: Colors.white),
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Relaksasi & motivasi untuk jiwa bahagia',
+                  'Musik relaksasi untuk ketenangan pikiran',
                   style: AppTextStyles.bodyMedium.copyWith(color: Colors.white.withOpacity(0.9)),
                 ),
               ],

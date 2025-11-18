@@ -1,0 +1,23 @@
+📁 INSTRUKSI PENEMPATAN LOGO VIDA DIGITAL
+==========================================
+
+Silakan letakkan file logo Anda di folder ini dengan nama:
+👉 vida_logo.jpg
+
+LANGKAH-LANGKAH:
+1. Siapkan file logo dalam format JPG
+2. Rename file menjadi: vida_logo.jpg
+3. Copy file tersebut ke folder: assets/images/
+4. Logo akan otomatis muncul di aplikasi
+
+REKOMENDASI UKURAN:
+- Ukuran optimal: 500x500 px (square/kotak)
+- Ukuran minimum: 200x200 px
+- Format: JPG atau PNG
+- Jika menggunakan PNG, ganti extension di kode dari .jpg ke .png
+
+LOKASI KODE:
+File: lib/screens/home_screen.dart
+Line: ~112-120 (bagian _buildWelcomeCard)
+
+Jika logo sudah ditempatkan, hapus file ini.
